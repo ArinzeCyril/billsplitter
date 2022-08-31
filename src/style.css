@@ -11,6 +11,17 @@ body {
 .mgn-right {
     margin-right: 1rem;
 }
+
+.input {
+    position: relative;
+}
+
+i {
+    font-size: 2rem;
+    position: absolute;
+    left: 1.5rem;
+    top: .6rem;
+}
   
 .header {
     text-align: center;
@@ -24,6 +35,7 @@ body {
     background-color: rgb(255, 255, 255);
     border-radius: 1.5rem;
     padding: 1.5rem;
+    max-width: 35rem;
 }
 
 .bill-input, .people-no-input, .tip-amt-input {

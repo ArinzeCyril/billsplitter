@@ -3,16 +3,16 @@ import Calculations from './calculations'
 import ResultDisplay from './resultDisplay'
 
 export default function Body() {
-    const [value, setValue] = useState('')
-    const [tipA, setTipA] = useState('')
-    const [peopleNo, setPeopleNo] = useState('')
-    const [tip, setTip] = useState('')
+    const [value, setValue] = useState('') //bill amount
+    const [tipA, setTipA] = useState('') //tip amount
+    const [peopleNo, setPeopleNo] = useState('') //number of people
+    const [tip, setTip] = useState('') //tip percentage
 
   return (
     <div className='body'>
         <Calculations 
             valueA={value}
-            setValue={setValue}
+            setValueA={setValue}
             tipA={tipA}
             setTipA={setTipA}
             peopleNo={peopleNo}
@@ -22,7 +22,7 @@ export default function Body() {
         />
         <ResultDisplay 
             valueA={value}
-            setValue={setValue}
+            setValueA={setValue}
             tipA={tipA}
             setTipA={setTipA}
             peopleNo={peopleNo}

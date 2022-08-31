@@ -1,7 +1,8 @@
 export default function TipPercent({tip, setTip}) {
-    let bColor1, bColor2, bColor3, bColor4, bColor5 
+    let bgColor1, bgColor2, bgColor3, bgColor4, bgColor5 
     let color1, color2, color3, color4, color5 
 
+    //the 5 handle clicks below handles the percentage buttons
     const handleClick1 = () => {
         return setTip(5);
     }
@@ -25,26 +26,28 @@ export default function TipPercent({tip, setTip}) {
         return setTip(e.target.value)
     }
 
+    //percentages for the button
     const tip1 = 5;
     const tip2 = 10;
     const tip3 = 20;
     const tip4 = 50;
     const tip5 = 75;
 
+    //highlight color and bgColor on click
     if (tip === tip1) {
-        bColor1 = 'rgb(22, 43, 85)'
+        bgColor1 = 'rgb(22, 43, 85)'
         color1 = "#fff"
     } else if (tip === tip2) {
-        bColor2 = 'rgb(22, 43, 85)'
+        bgColor2 = 'rgb(22, 43, 85)'
         color2 = "#fff"
     } else if (tip === tip3) {
-        bColor3 = 'rgb(22, 43, 85)'
+        bgColor3 = 'rgb(22, 43, 85)'
         color3 = "#fff"
     } else if (tip === tip4) {
-        bColor4 = 'rgb(22, 43, 85)'
+        bgColor4 = 'rgb(22, 43, 85)'
         color4 = "#fff"
     } else if (tip === tip5) {
-        bColor5 = 'rgb(22, 43, 85)'
+        bgColor5 = 'rgb(22, 43, 85)'
         color5 = "#fff"            
     }
 
@@ -53,11 +56,11 @@ export default function TipPercent({tip, setTip}) {
     <>
         <h3>Sellect Tip Percent</h3>
         <div className="tip-percents">
-            <p onClick={handleClick1} style={{backgroundColor: bColor1, color: color1}} className="tip-percent">{tip1}%</p>
-            <p onClick={handleClick2} style={{backgroundColor: bColor2, color: color2}} className="tip-percent">{tip2}%</p>
-            <p onClick={handleClick3} style={{backgroundColor: bColor3, color: color3}} className="tip-percent">{tip3}%</p>
-            <p onClick={handleClick4} style={{backgroundColor: bColor4, color: color4}} className="tip-percent">{tip4}%</p>
-            <p onClick={handleClick5} style={{backgroundColor: bColor5, color: color5}} className="tip-percent">{tip5}%</p>
+            <p onClick={handleClick1} style={{backgroundColor: bgColor1, color: color1}} className="tip-percent">{tip1}%</p>
+            <p onClick={handleClick2} style={{backgroundColor: bgColor2, color: color2}} className="tip-percent">{tip2}%</p>
+            <p onClick={handleClick3} style={{backgroundColor: bgColor3, color: color3}} className="tip-percent">{tip3}%</p>
+            <p onClick={handleClick4} style={{backgroundColor: bgColor4, color: color4}} className="tip-percent">{tip4}%</p>
+            <p onClick={handleClick5} style={{backgroundColor: bgColor5, color: color5}} className="tip-percent">{tip5}%</p>
             <input 
                 className="tip-percent tip-input"
                 type="number"
